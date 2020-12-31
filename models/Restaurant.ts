@@ -8,7 +8,7 @@ class Restaurant {
 		private address: string, 
 		private lat: number,
 		private lng: number,
-		private kind_food: string
+		private kind_food: string, 
 	) {
 		
 		this.coordinates = [this.lat, this.lng];
@@ -43,6 +43,7 @@ class Restaurant {
 	get getCoordinates (){
 		return this.coordinates; 
 	}
+
 	// setters
 	set setKind (kind_food:string) {
 		this.kind_food = kind_food;

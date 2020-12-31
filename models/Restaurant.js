@@ -1,3 +1,4 @@
+"use strict";
 var Restaurant = /** @class */ (function () {
     function Restaurant(id_restaurant, name, address, lat, lng, kind_food) {
         this.id_restaurant = id_restaurant;

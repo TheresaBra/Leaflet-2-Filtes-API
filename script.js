@@ -4,7 +4,8 @@ window.addEventListener('load', function () {
 	let restaurants = []; 
 	let markers = L.markerClusterGroup();
 	// Map:
-	let map = L.map('mapid').on('load', onMapLoad).setView([41.400, 2.206], 9);
+	let zoom = 13;
+	let map = L.map('mapid').on('load', onMapLoad).setView([41.400, 2.206], zoom);
 	// tiles:	
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 	const selector = document.getElementById("kind_food_selector"); 
@@ -98,12 +99,34 @@ window.addEventListener('load', function () {
 		// set markers for filtered restaurants
 
 		for (let restaurant of filtered){
-			let marker = L.marker(restaurant.getCoordinates).bindPopup(`
-			<b> ${restaurant.getName} </b>
-			<span> ${restaurant.getAddress} </span>`);
-			markers.addLayer(marker); 
-		}
+				let marker = L.marker(restaurant.getCoordinates);
+				marker.bindPopup(`<img src='mediterran.jpg' alt='gif' width='280px height= '500px'/>
+				<b>${restaurant.getName}</b></br>
+				<span> ${restaurant.getAddress}</span>`);
+				
+				markers.addLayer(marker); 
+			}
 		
-		map.addLayer(markers);
+	map.addLayer(markers);
+	
+	// centering current position
+	let currentCoordinates = [];
+
+	for (let restaurant of filtered) {
+		currentCoordinates.push(restaurant.getCoordinates);
+	}
+
+	var bounds = new L.LatLngBounds(currentCoordinates);
+
+	map.fitBounds(bounds); 
+
+	// function onMarkerCLick(marker) {
+	// 	for (marker of markers){
+	// 	map.setView([marker.restaurant.getCoordinates], 16) 
+	// 	map.fitBounds([marker.restaurant.getCoordinates]); 
+	// 	}
+	// };
+	// map.on('click',onMarkerCLick);  	
+	
 	}; 	
 });
