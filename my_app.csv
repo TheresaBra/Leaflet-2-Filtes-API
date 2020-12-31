@@ -1,0 +1,11 @@
+id_restaurant,name,address,lat,lng,kind_food,photo
+1,"Bar Central","Carrer d'Elisabets 6, 08001 Barcelona",41.38349000,2.16875000,Tapas,C:\\xampp\\htdocs\\mapa\\foto\\tapas
+2,"La Monroe","Plaça de Salvador Seguí 1-9, 08001 Barcelona",41.37857100,2.17106000,Mediterranean,C:\\xampp\\htdocs\\mapa\\foto\\mediterran
+3,"La Bombeta","Carrer de la Maquinista 3, 08003 Barcelona",41.38055000,2.18771000,Tapas,C:\\xampp\\htdocs\\mapa\\foto\\tapas
+4,"Restaurante Koh","Carrer de Pujades 133, 08005 Barcelona",41.39966000,2.19784000,Asian,C:\\xampp\\htdocs\\mapa\\foto\\asian
+5,"La Pizza del Sortidor Poble Sec","Carrer de Blasco de Garay 46, 08004 Barcelona",41.37263030,2.16241930,Pizzeria,C:\\xampp\\htdocs\\mapa\\foto\\pizza
+6,"Marina Port Vell Restaurant","Moll de la Barceloneta 1, 08003 Barcelona",41.37997050,2.18638500,Mediterranean,C:\\xampp\\htdocs\\mapa\\foto\\mediterran
+7,"Kak Koy","Carrer de Ripoll 16, 08002 Barcelona",41.38531000,2.17545000,Asian,C:\\xampp\\htdocs\\mapa\\foto\\asian
+8,ELDISET,"Carrer Antic de Sant Joan 3, 08003 Barcelona",41.38499010,2.18338850,Tapas,C:\\xampp\\htdocs\\mapa\\foto\\tapas
+9,"La Alcoba Azul","Carrer de Salomó ben Adret 14,  08002 Barcelona",41.38289130,2.17553100,Tapas,C:\\xampp\\htdocs\\mapa\\foto\\tapas
+10,"Los Platitos","Carrer de la Diputació 346, 08013 Barcelona",41.39538110,2.17387780,Tapas,C:\\xampp\\htdocs\\mapa\\foto\\tapas
