@@ -38,9 +38,11 @@ window.addEventListener('load', function () {
 					listKindFood.push(restaurant.getKind_food);	
 				}
 				// console.log(listKindFood); 
+				
 				let kindsUnique = listKindFood.filter(function(value, index, self){
 					return self.indexOf(value) === index;
 				}); 
+				console.log(kindsUnique);
 
 				//create selector with kind of food to choose
 
