@@ -33,13 +33,17 @@ window.addEventListener('load', function () {
 
 				// selector kind of food
 				let listKindFood = [];
+				let kindsSeparated; 
+
 				
 				for (let restaurant of restaurants){
 					listKindFood.push(restaurant.getKind_food);	
+					kindsSeparated = listKindFood.toString().split(","); 
+					
 				}
-				// console.log(listKindFood); 
+				console.log(kindsSeparated); 
 				
-				let kindsUnique = listKindFood.filter(function(value, index, self){
+				let kindsUnique = kindsSeparated.filter(function(value, index, self){
 					return self.indexOf(value) === index;
 				}); 
 				console.log(kindsUnique);
@@ -92,7 +96,7 @@ window.addEventListener('load', function () {
 			filtered = restaurants;
 		}else{
 			for (let restaurant of restaurants){
-				if (filter === restaurant.getKind_food){
+				if (restaurant.getKind_food.includes(filter)){
 					filtered.push(restaurant);
 				}
 			}
